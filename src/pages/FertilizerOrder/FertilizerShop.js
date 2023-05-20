@@ -31,7 +31,7 @@ function ShowAllFertilizer() {
     const config = {
       headers: { 'Authorization': `Bearer ${token}` }
     };
-    axios.get('http://localhost:1337/api/fertilzer-controller/')
+    axios.get('https://0385-123-231-123-102.ngrok-free.app/api/fertilzer-controller/')
       .then((res) => {
         setFertilizer(res.data.Fertilizers);
         console.log(fertilizer)
@@ -75,7 +75,7 @@ function ShowAllFertilizer() {
               <Card style={{ padding: "10px", height: "28rem", }}>
                 <div style={{ height: '11rem', display: 'flex', justifyContent: 'center' }}>
                   <img
-                    src={`http://localhost:1337/uploads/${e.image_path}`}
+                    src={`https://0385-123-231-123-102.ngrok-free.app/uploads/${e.image_path}`}
                     alt="Nothing"
                     height="100%"
                     width="auto"

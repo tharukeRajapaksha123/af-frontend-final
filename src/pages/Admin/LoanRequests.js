@@ -15,7 +15,7 @@ function LoanRequests() {
         headers: { 'Authorization': `Bearer ${token}` }
     };
     useEffect(() => {
-        axios.get('http://localhost:1337/api/loan-controller/approved-loans', config)
+        axios.get('https://0385-123-231-123-102.ngrok-free.app/api/loan-controller/approved-loans', config)
             .then(response => {
                 setALoans(response.data.loans)
                 // console.log(Aloans);
@@ -28,7 +28,7 @@ function LoanRequests() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:1337/api/loan-controller/`, config).then((res) => {
+        axios.get(`https://0385-123-231-123-102.ngrok-free.app/api/loan-controller/`, config).then((res) => {
             // console.log("first", res.data)
             setLoans(res.data.Loans)
             // console.log(loans);
@@ -41,23 +41,23 @@ function LoanRequests() {
     const ApproveLoan = (e) => {
         const id = e._id
         console.log(id);
-        axios.put(`http://localhost:1337/api/loan-controller/Update/${id}`)
+        axios.put(`https://0385-123-231-123-102.ngrok-free.app/api/loan-controller/Update/${id}`)
     }
     const DeleteLoan = (e) => {
         const id = e._id
         console.log(id);
-        axios.delete(`http://localhost:1337/api/loan-controller/Delete/${id}`)
+        axios.delete(`https://0385-123-231-123-102.ngrok-free.app/api/loan-controller/Delete/${id}`)
         navigate(0);
     }
     const UpdateApproveLoan = (e) => {
         const id = e._id
         console.log(id);
-        axios.put(`http://localhost:1337/api/loan-controller/Update/${id}`)
+        axios.put(`https://0385-123-231-123-102.ngrok-free.app/api/loan-controller/Update/${id}`)
     }
     const DeleteApproveLoan = (e) => {
         const id = e._id
         console.log(id);
-        axios.delete(`http://localhost:1337/api/loan-controller/Delete/${id}`)
+        axios.delete(`https://0385-123-231-123-102.ngrok-free.app/api/loan-controller/Delete/${id}`)
         navigate(0);
     }
     return (

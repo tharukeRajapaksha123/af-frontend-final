@@ -29,7 +29,7 @@ function HarvestCart() {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:1337/api/cart-controller/all/${user}`, config).then((res) => {
+    axios.get(`https://0385-123-231-123-102.ngrok-free.app/api/cart-controller/all/${user}`, config).then((res) => {
       setItems(res.data.Carts);
     }).catch(err => {
       alert(err)
@@ -38,14 +38,14 @@ function HarvestCart() {
   });
   
   const removeCart = (id) => {
-    axios.delete(`http://localhost:1337/api/cart-controller/${id}`).then((res) => {
+    axios.delete(`https://0385-123-231-123-102.ngrok-free.app/api/cart-controller/${id}`).then((res) => {
     alert("Item Removed Successfully");
     setItems(res.data.remainingItems);
   })
 }
  
 const checkout = () => {
-  axios.post('http://localhost:1337/api/cart-controller/checkout/',items).then(async res => {
+  axios.post('https://0385-123-231-123-102.ngrok-free.app/api/cart-controller/checkout/',items).then(async res => {
     console.log(res);
     const amount = res.data.totalAmount
     navigate('/Checkout', { state: { props: amount } })

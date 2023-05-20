@@ -30,7 +30,7 @@ function ShowCardVeiew() {
     const config = {
       headers: { 'Authorization': `Bearer ${token}` }
     };
-    axios.get('http://localhost:1337/api/harvest-controller/', config)
+    axios.get('https://0385-123-231-123-102.ngrok-free.app/api/harvest-controller/', config)
       .then((res) => {
         setHarvest(res.data.Harvests);
         console.log(harvest)
@@ -78,7 +78,7 @@ function ShowCardVeiew() {
               <Card style={{ padding: "10px", height: "28rem", }}>
                 <div style={{ height: '11rem', display: 'flex', justifyContent: 'center' }}>
                   <img
-                    src={`http://localhost:1337/uploads/harvest/${e.image_path}`}
+                    src={`https://0385-123-231-123-102.ngrok-free.app/uploads/harvest/${e.image_path}`}
                     alt="Nothing"
                     height="100%"
                     width="auto"

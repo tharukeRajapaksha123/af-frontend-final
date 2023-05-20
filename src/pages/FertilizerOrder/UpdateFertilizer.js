@@ -43,7 +43,7 @@ function AddFertilizer() {
 
         console.log("From dta: :", formData);
 
-        axios.put("http://localhost:1337/api/fertilzer-controller/", formData).then((res) => {
+        axios.put("https://0385-123-231-123-102.ngrok-free.app/api/fertilzer-controller/", formData).then((res) => {
             alert("fertilizer updated successfully!!!")
             navigate("/FertilizerViewPage");
         }).catch(err => {

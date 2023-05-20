@@ -59,7 +59,7 @@ describe('AddHarvest', () => {
     await form.simulate('submit');
     
     expect(toastSuccessSpy).toHaveBeenCalledWith('Product Insert Successful');
-    expect(axios.post).toHaveBeenCalledWith('http://localhost:1337/api/harvest-controller/', expect.any(FormData));
+    expect(axios.post).toHaveBeenCalledWith('https://0385-123-231-123-102.ngrok-free.app/api/harvest-controller/', expect.any(FormData));
   });
   
   // Test case 4 - check if error message is displayed when success occurs

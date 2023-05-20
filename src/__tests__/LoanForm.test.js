@@ -54,7 +54,7 @@ describe('LoanForm', () => {
     await form.simulate('submit');
     
     expect(toastSuccessSpy).toHaveBeenCalledWith('Loan Requested Successfully');
-    expect(axios.post).toHaveBeenCalledWith('http://localhost:1337/api/loan-controller/', expect.any(Object));
+    expect(axios.post).toHaveBeenCalledWith('https://0385-123-231-123-102.ngrok-free.app/api/loan-controller/', expect.any(Object));
   });
   
   // Test case 4 - check if error message is displayed when success occurs

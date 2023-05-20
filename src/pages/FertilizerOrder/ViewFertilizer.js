@@ -31,7 +31,7 @@ function ViewFertilizer() {
             headers: { 'Authorization': `Bearer ${token}` }
         };
 
-        axios.get('http://localhost:1337/api/fertilzer-controller', config).then((res) => {
+        axios.get('https://0385-123-231-123-102.ngrok-free.app/api/fertilzer-controller', config).then((res) => {
             setFertilizer(res.data.Fertilizers);
             console.log("Fertilizers:: ", fertilizer);
         }).catch((err) => {
@@ -42,7 +42,7 @@ function ViewFertilizer() {
     }, [fertilizer])
 
     const deleteFertilizer = (e) => {
-        axios.delete(`http://localhost:1337/api/fertilzer-controller/${e}`).then(res => {
+        axios.delete(`https://0385-123-231-123-102.ngrok-free.app/api/fertilzer-controller/${e}`).then(res => {
             toast.error('Product Is Deleted Successfuly!!')
         }).catch(err => {
             alert(err)

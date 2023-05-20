@@ -14,7 +14,7 @@ function AdminDash() {
         headers: { 'Authorization': `Bearer ${token}` }
     };
     useEffect(() => {
-        axios.get(`http://localhost:1337/api/auth-controller/get/farmer/inActive`, config).then((res) => {
+        axios.get(`https://0385-123-231-123-102.ngrok-free.app/api/auth-controller/get/farmer/inActive`, config).then((res) => {
             console.log("first", res.data.farmers)
             setFarmers(res.data.inactiveFarmers)
             console.log(Farmers);
@@ -24,7 +24,7 @@ function AdminDash() {
         })
     }, [])
     useEffect(() => {
-        axios.get(`http://localhost:1337/api/auth-controller/get/farmer/Active`, config).then((res) => {
+        axios.get(`https://0385-123-231-123-102.ngrok-free.app/api/auth-controller/get/farmer/Active`, config).then((res) => {
             console.log("first", res.data.farmers)
             setActiveFarmers(res.data.ActiveFarmers)
             console.log(Farmers);
@@ -34,7 +34,7 @@ function AdminDash() {
         })
     }, [])
     useEffect(() => {
-        axios.get(`http://localhost:1337/api/auth-controller/get/users`, config).then((res) => {
+        axios.get(`https://0385-123-231-123-102.ngrok-free.app/api/auth-controller/get/users`, config).then((res) => {
             console.log("first", res.data.users)
             setUsers(res.data.users)
             console.log(Users);
@@ -45,7 +45,7 @@ function AdminDash() {
     }, [])
 
     // useEffect(() => {
-    //     axios.get(`http://localhost:1337/order-controller/Order/order/Approved`, config).then((res) => {
+    //     axios.get(`https://0385-123-231-123-102.ngrok-free.app/order-controller/Order/order/Approved`, config).then((res) => {
     //         // console.log("first", res.data)
     //         setapprovedOrders(res.data)
     //         console.log(pendingOrders);
@@ -58,7 +58,7 @@ function AdminDash() {
     const deleteRecord = (e) => {
         const id = e._id
         console.log(id);
-        axios.delete(`http://localhost:1337/api/auth-controller/delete/${id}`, config).then(res => {
+        axios.delete(`https://0385-123-231-123-102.ngrok-free.app/api/auth-controller/delete/${id}`, config).then(res => {
             alert("User Deleted !")
             Navigate(-1);
         }).catch(err => {
@@ -71,7 +71,7 @@ function AdminDash() {
         console.log(id);
         console.log("Update");
 
-        axios.put(`http://localhost:1337/api/auth-controller/farmer/Activate/${id}`, config).then(res => {
+        axios.put(`https://0385-123-231-123-102.ngrok-free.app/api/auth-controller/farmer/Activate/${id}`, config).then(res => {
             alert("User Approved !")
         })
     }

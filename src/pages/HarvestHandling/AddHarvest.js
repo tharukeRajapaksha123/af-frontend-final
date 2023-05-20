@@ -30,7 +30,7 @@ function AddHarvest() {
     formData.append("file", image_path)
 
 
-    axios.post('http://localhost:1337/api/harvest-controller/', formData).then(async res => {
+    axios.post('https://0385-123-231-123-102.ngrok-free.app/api/harvest-controller/', formData).then(async res => {
       console.log("Item inserted");
       toast.success('Product Insert Successful')
     }).catch(err => {

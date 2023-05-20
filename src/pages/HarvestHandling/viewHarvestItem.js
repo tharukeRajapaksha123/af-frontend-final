@@ -52,7 +52,7 @@ function ViewHarvestItem() {
     headers: { 'Authorization': `Bearer ${token}` }
   };
   useEffect(() => {
-    axios.get(`http://localhost:1337/api/harvest-controller/${ID}`, config).then((res) => {
+    axios.get(`https://0385-123-231-123-102.ngrok-free.app/api/harvest-controller/${ID}`, config).then((res) => {
       setItem(res.data.Harvest);
       console.log(item)
     }).catch(err => {
@@ -73,7 +73,7 @@ function ViewHarvestItem() {
       price: e.unit_price
     }
     console.log(Cart);
-    axios.post('http://localhost:1337/api/cart-controller', Cart).then(res => {
+    axios.post('https://0385-123-231-123-102.ngrok-free.app/api/cart-controller', Cart).then(res => {
       alert("Item Added To Cart Successfully");
     }).catch(e => {
       alert(e)
@@ -98,7 +98,7 @@ function ViewHarvestItem() {
               <center>
 
                 <img
-                  src={`http://localhost:1337/uploads/harvest/${item.image_path}`}
+                  src={`https://0385-123-231-123-102.ngrok-free.app/uploads/harvest/${item.image_path}`}
                   alt="Nothing"
                   style={{
                     width: "100%",

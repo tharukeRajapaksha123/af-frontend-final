@@ -48,7 +48,7 @@ function Updateharvest() {
         }
 
         console.log("FormData:: ", formData);
-        axios.put("http://localhost:1337/api/harvest-controller/", formData).then((res) => {
+        axios.put("https://0385-123-231-123-102.ngrok-free.app/api/harvest-controller/", formData).then((res) => {
             alert("Harvest updated successfully!!!")
             navigate("/HarvestListing");
         }).catch(err => {

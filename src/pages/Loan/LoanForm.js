@@ -42,7 +42,7 @@ function LoanForm() {
         }
         console.log(formData);
 
-        axios.post('http://localhost:1337/api/loan-controller/', formData)
+        axios.post('https://0385-123-231-123-102.ngrok-free.app/api/loan-controller/', formData)
             .then(async res => {
                 console.log("inserted");
                 toast.success('Loan Requested Successfully')

@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         const config = {
             headers: { 'Authorization': `Bearer ${token}` }
         };
-      axios.get('http://localhost:1337/api/harvest-controller/',config)
+      axios.get('https://0385-123-231-123-102.ngrok-free.app/api/harvest-controller/',config)
       .then((res) => {
             setHarvest(res.data.Harvests);
             console.log(harvest)

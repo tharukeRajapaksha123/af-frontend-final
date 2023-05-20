@@ -32,7 +32,7 @@ function HarvestListing() {
             headers: { 'Authorization': `Bearer ${token}` }
         };
 
-        axios.get(`http://localhost:1337/api/harvest-controller/seller/${user}`, config).then((res) => {
+        axios.get(`https://0385-123-231-123-102.ngrok-free.app/api/harvest-controller/seller/${user}`, config).then((res) => {
             setHarvest(res.data.harvests);
             console.log("Harvests: ", harvest);
         }).catch((err) => {
@@ -43,7 +43,7 @@ function HarvestListing() {
     }, [harvest])
 
     const deleteHarvest = (e) => {
-        axios.delete(`http://localhost:1337/api/harvest-controller/${e}`).then(res => {
+        axios.delete(`https://0385-123-231-123-102.ngrok-free.app/api/harvest-controller/${e}`).then(res => {
             toast.success('Harvest Item Is Deleted Successfuly!!')
         }).catch(err => {
             alert(err)

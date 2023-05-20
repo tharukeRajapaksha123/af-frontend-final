@@ -33,7 +33,7 @@ function Login() {
       email,
       password
     }
-    axios.post(`http://localhost:1337/api/auth-controller/login`, data)
+    axios.post(`https://0385-123-231-123-102.ngrok-free.app/api/auth-controller/login`, data)
       .then((res) => {
         alert(res.data.message);
         console.log(res.data);

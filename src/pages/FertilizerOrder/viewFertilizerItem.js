@@ -52,7 +52,7 @@ function ViewItems() {
     headers: { 'Authorization': `Bearer ${token}` }
   };
   useEffect(() => {
-    axios.get(`http://localhost:1337/api/fertilzer-controller/${ID}`)
+    axios.get(`https://0385-123-231-123-102.ngrok-free.app/api/fertilzer-controller/${ID}`)
       .then((res) => {
         console.log("one",res.data)
         setItem(res.data.fertilizer);
@@ -76,7 +76,7 @@ function ViewItems() {
       price: e.unit_price
     }
     console.log(Cart);
-    axios.post('http://localhost:1337/api/cart-controller', Cart).then(res => {
+    axios.post('https://0385-123-231-123-102.ngrok-free.app/api/cart-controller', Cart).then(res => {
       alert("Item Added To Cart Successfully");
     }).catch(e => {
       alert(e)
@@ -101,7 +101,7 @@ function ViewItems() {
               <center>
 
                 <img
-                  src={`http://localhost:1337/uploads/${item.image_path}`}
+                  src={`https://0385-123-231-123-102.ngrok-free.app/uploads/${item.image_path}`}
                   alt="Nothing"
                   style={{
                     width: "100%",

@@ -27,7 +27,7 @@ function AddFertilizer() {
     console.log("unit", MeasurementUnit)
     console.log("FormData", formData)
 
-    axios.post('http://localhost:1337/api/fertilzer-controller/', formData).then(async res => {
+    axios.post('https://0385-123-231-123-102.ngrok-free.app/api/fertilzer-controller/', formData).then(async res => {
       console.log("inserted");
       toast.success('Fertilizer Published Successfully')
     }).catch(err => {

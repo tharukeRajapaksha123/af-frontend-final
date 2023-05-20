@@ -36,7 +36,7 @@ export default function CheckoutFtz() {
   const placeOrder = (e) => {
     e.preventDefault();
     axios
-      .get(`http://localhost:1337/api/cart-controller/all/${user}`, config)
+      .get(`https://0385-123-231-123-102.ngrok-free.app/api/cart-controller/all/${user}`, config)
       .then((res) => {
         const itemNames = res.data.Carts.map((cart) => cart.itemName);
         setCart(itemNames);
@@ -47,7 +47,7 @@ export default function CheckoutFtz() {
           orderData.append("placedBy", name);
           orderData.append("amount", amount);
           orderData.append("status", "Order Placed");
-          axios.post("http://localhost:1337/api/order-controller/", orderData)
+          axios.post("https://0385-123-231-123-102.ngrok-free.app/api/order-controller/", orderData)
             .then((res) => {
               console.log(res.data);
             })
@@ -55,7 +55,7 @@ export default function CheckoutFtz() {
               alert(err);
               return;
             });
-          axios.delete(`http://localhost:1337/api/cart-controller/deletecart/${user}`)
+          axios.delete(`https://0385-123-231-123-102.ngrok-free.app/api/cart-controller/deletecart/${user}`)
             .then((res) => {
             console.log(res.data);
             alert("Order Placed Successfully!")
